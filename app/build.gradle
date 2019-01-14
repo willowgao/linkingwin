@@ -26,12 +26,13 @@ dependencies {
     androidTestImplementation 'com.android.support.test:runner:1.0.2'
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.1'
 
-
-    compile 'org.xutils:xutils:3.5.0'
-    compile 'com.alibaba:fastjson:1.2.30'
-    compile 'org.apache.commons:commons-lang3:3.4'
+    implementation 'com.xyz.step:step:1.0.4'
+    implementation 'org.xutils:xutils:3.5.0'
+    implementation 'com.wrbug:timelineview:1.0.0'
+    implementation 'com.alibaba:fastjson:1.2.30'
+    implementation 'org.apache.commons:commons-lang3:3.4'
     /** add by willowgao 2017-12-29 下拉刷新工具  **/
-    compile 'com.baoyz.pullrefreshlayout:library:1.2.0'
+    implementation 'com.baoyz.pullrefreshlayout:library:1.2.0'
     /** add by willowgao 20178-01-02  日期控制 */
-    compile 'com.prolificinteractive:material-calendarview:1.4.3'
+    implementation 'com.prolificinteractive:material-calendarview:1.4.3'
 }

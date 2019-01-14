@@ -4,6 +4,7 @@ import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.pm.PackageInfo;
 import android.content.pm.PackageManager;
+import android.graphics.Color;
 import android.net.Uri;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
@@ -13,24 +14,32 @@ import android.widget.Toast;
 import com.alibaba.fastjson.JSONObject;
 import com.linkingwin.education.studyonline.R;
 import com.linkingwin.education.studyonline.common.base.BaseActivity;
+import com.linkingwin.education.studyonline.common.base.MainActivity;
 import com.linkingwin.education.studyonline.common.base.interfaces.IMainView;
 import com.linkingwin.education.studyonline.common.base.presenter.MainPresenter;
 import com.linkingwin.education.studyonline.common.http.HttpManager;
+import com.wrbug.timeline.TimeLineView;
+import com.xyz.step.FlowViewHorizontal;
 
 import org.xutils.view.annotation.ContentView;
+import org.xutils.view.annotation.ViewInject;
+
+import java.util.ArrayList;
+import java.util.List;
 
 
 @ContentView(R.layout.activity_welcome)
 public class WelcomeActivity extends BaseActivity implements IMainView {
+
+   @ViewInject(R.id.hflowview4)
+   FlowViewHorizontal mView;
+
     MainPresenter presenter = new MainPresenter(this, this);
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        if (!HttpManager.isNetworkConnected(this)) {
-            Toast.makeText(this, "网络未连接，请检查您的网络!", Toast.LENGTH_LONG).show();
-            return;
-        }
-        presenter.selectVersion();
+        mView.setProgress(3,4,new String[]{"申请面试","老师面试","开课考核","开课成功"},null);
+
     }
 
 
@@ -72,6 +81,8 @@ public class WelcomeActivity extends BaseActivity implements IMainView {
         }
         return versionCode;
     }
+
+
 
     @Override
     public void toMain() {

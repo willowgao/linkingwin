@@ -14,6 +14,7 @@ import android.widget.Toast;
 import com.linkingwin.education.studyonline.R;
 import com.linkingwin.education.studyonline.common.base.interfaces.IBaseView;
 
+import org.xutils.view.annotation.ContentView;
 import org.xutils.view.annotation.ViewInject;
 import org.xutils.x;
 
@@ -23,6 +24,7 @@ import org.xutils.x;
  * @时间 2017/3/29 14:04
  */
 
+@ContentView(R.layout.toolbar)
 public class BaseActivity extends AppCompatActivity implements IBaseView {
 
     public static final int CHOICE_RESULT_CODE = 500;

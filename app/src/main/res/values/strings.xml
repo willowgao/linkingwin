@@ -1,3 +1,21 @@
 <resources>
     <string name="app_name">teacher</string>
+
+
+
+    <!-- ******************************************************明细***********************************-->
+    <string name="tv_smrz">实名认证</string>
+    <string name="tv_wdrz">我的认证</string>
+    <string name="tv_grzl">个人资料</string>
+    <string name="tv_xbxk">学部学科</string>
+
+    <string name="tv_sksj">授课时间</string>
+    <string name="tv_zxsk">在线授课</string>
+    <string name="tv_jbfwzz">基础服务准则</string>
+    <string name="tv_xxptgz">学习平台规则</string>
+    <string name="tv_xgkpxsp">学观看培训视频</string>
+
+
+
+
 </resources>

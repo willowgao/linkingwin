@@ -3,21 +3,23 @@
     xmlns:toolbar="http://schemas.android.com/apk/res-auto"
     android:orientation="horizontal"
     android:layout_width="match_parent"
-    android:layout_height="50dp" >
+    android:layout_height="50dp"
+    android:background="@color/colorPrimary">
 
 
     <android.support.v7.widget.Toolbar
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:minHeight="?attr/actionBarSize"
+        android:theme="@style/ToolBarTheme"
         android:id="@+id/toolbar"
-        toolbar:title="主页">
+        toolbar:navigationIcon="@mipmap/ic_back">
 
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="vertical"
-            android:layout_gravity="right"
+            android:layout_gravity="center"
             android:gravity="center">
 
             <TextView
@@ -27,8 +29,8 @@
                 android:orientation="vertical"
                 android:layout_gravity="right"
                 android:layout_marginRight="5dp"
-                android:textSize="16dp"
-                android:text="高少华" />
+                android:textSize="18dp"
+                android:text="我要开课" />
 
             <TextView
                 android:id="@+id/tv_subtitle"

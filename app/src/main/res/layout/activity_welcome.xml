@@ -1,9 +1,561 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-xmlns:tools="http://schemas.android.com/tools"
-android:layout_width="match_parent"
-android:layout_height="match_parent"
-android:gravity="center_vertical"
-android:background="@drawable/welcome"
-tools:context="com.linkingwin.education.studyonline.student.WelcomeActivity">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/table_input_bg"
+    tools:context="com.linkingwin.education.studyonline.student.WelcomeActivity">
+
+    <include
+        android:id="@+id/layout_title"
+        layout="@layout/toolbar" />
+
+    <ScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/layout_title">
+
+        <LinearLayout
+            android:id="@+id/layout_adddevices"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/layout_title"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <com.xyz.step.FlowViewHorizontal
+                        android:id="@+id/hflowview4"
+                        android:background="@color/colorPrimary"
+                        android:layout_width="match_parent"
+                        android:layout_height="80dp"
+                        android:paddingLeft="30dp"
+                        app:h_pro_color="@color/drawer_list_bg"
+                        app:h_bg_radius="10dp"
+                        app:h_bg_width='4dp'
+                        app:h_pro_radius='8dp'
+                        app:h_pro_width="2dp"
+                        app:h_text_padding='10dp'
+                        app:h_textsize='10dp'
+                        app:h_time_padding='17dp' />
+
+
+                </RelativeLayout>
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/login_under_color"
+                android:layout_marginTop="6sp"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="8sp">
+
+                    <ImageView
+                        android:id="@+id/iv_pic"
+                        android:layout_width="18sp"
+                        android:layout_height="18sp"
+                        android:layout_centerVertical="true"
+                        android:background="@drawable/choice_no" />
+
+                    <TextView
+                        android:id="@+id/tv_smrz_lable"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_margin="5sp"
+                        android:layout_toRightOf="@+id/iv_pic"
+                        android:text="@string/tv_smrz"
+                        android:textSize="@dimen/detail_blue_bigger" />
+
+                    <EditText
+                        android:id="@+id/et_smrz_model"
+                        android:layout_width="200sp"
+                        android:layout_marginTop="15sp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="18sp"
+                        android:layout_toRightOf="@+id/tv_smrz_lable"
+                        android:background="@android:color/transparent"
+                        android:hint="尚未提供认证材料"
+                        android:textSize="@dimen/choice_ware_bigger" />
+
+                    <ImageView
+                        android:id="@+id/iv_pic_go"
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:background="@drawable/go" />
+
+
+                </RelativeLayout>
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_below="@+id/iv_pic"
+                    android:background="@drawable/u62_line" />
+
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/login_under_color"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10sp">
+
+                    <ImageView
+                        android:id="@+id/iv_pic2"
+                        android:layout_width="18sp"
+                        android:layout_height="18sp"
+                        android:layout_centerVertical="true"
+                        android:background="@drawable/choice_no" />
+
+                    <TextView
+                        android:id="@+id/tv_wdrz_lable"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_margin="5sp"
+                        android:layout_toRightOf="@+id/iv_pic2"
+                        android:text="@string/tv_wdrz"
+                        android:textSize="@dimen/detail_blue_bigger" />
+
+                    <EditText
+                        android:id="@+id/et_wdrz_model"
+                        android:layout_width="200sp"
+                        android:layout_marginTop="12sp"
+                        android:layout_marginLeft="18sp"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@+id/tv_wdrz_lable"
+                        android:background="@android:color/transparent"
+                        android:hint="尚未提供认证材料"
+                        android:textSize="@dimen/choice_ware_bigger" />
+
+                    <ImageView
+                        android:id="@+id/iv_pic_go2"
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:background="@drawable/go" />
+
+
+                </RelativeLayout>
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_below="@+id/iv_pic_go2"
+                    android:background="@drawable/u62_line" />
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/login_under_color"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10sp">
+
+                    <ImageView
+                        android:id="@+id/iv_pic3"
+                        android:layout_width="18sp"
+                        android:layout_height="18sp"
+                        android:layout_centerVertical="true"
+                        android:background="@drawable/choice_no" />
+
+                    <TextView
+                        android:id="@+id/tv_grzl_lable"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_margin="5sp"
+                        android:layout_toRightOf="@+id/iv_pic3"
+                        android:text="@string/tv_grzl"
+                        android:textSize="@dimen/detail_blue_bigger" />
+
+                    <EditText
+                        android:id="@+id/et_grzl_model"
+                        android:layout_width="200sp"
+                        android:layout_marginTop="8sp"
+                        android:layout_marginLeft="18sp"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@+id/tv_grzl_lable"
+                        android:background="@android:color/transparent"
+                        android:hint="填写率达50%以上"
+                        android:textSize="@dimen/choice_ware_bigger" />
+
+                    <ImageView
+                        android:id="@+id/iv_pic_go3"
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:background="@drawable/go" />
+
+
+                </RelativeLayout>
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_below="@+id/iv_pic_go3"
+                    android:background="@drawable/u62_line" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6sp"
+                android:background="@color/login_under_color"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10sp">
+
+                    <ImageView
+                        android:id="@+id/iv_pic4"
+                        android:layout_width="18sp"
+                        android:layout_height="18sp"
+                        android:layout_centerVertical="true"
+                        android:background="@drawable/choice_yes" />
+
+                    <TextView
+                        android:id="@+id/tv_xbxk_lable"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_margin="5sp"
+                        android:layout_toRightOf="@+id/iv_pic4"
+                        android:text="@string/tv_xbxk"
+                        android:textSize="@dimen/detail_blue_bigger" />
+
+                    <EditText
+                        android:id="@+id/et_xbxk_model"
+                        android:layout_width="200sp"
+                        android:layout_marginTop="8sp"
+                        android:layout_marginLeft="18sp"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@+id/tv_xbxk_lable"
+                        android:background="@android:color/transparent"
+                        android:hint="小学语文"
+                        android:textSize="@dimen/choice_ware_bigger" />
+
+                    <ImageView
+                        android:id="@+id/iv_pic_go4"
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:background="@drawable/go" />
+                </RelativeLayout>
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_below="@+id/iv_pic_go4"
+                    android:background="@drawable/u62_line" />
+            </LinearLayout>
+
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/login_under_color"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10sp">
+
+                    <ImageView
+                        android:id="@+id/iv_pic5"
+                        android:layout_width="18sp"
+                        android:layout_height="18sp"
+                        android:layout_centerVertical="true"
+                        android:background="@drawable/choice_no" />
+
+                    <TextView
+                        android:id="@+id/tv_sksj_lable"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_margin="5sp"
+                        android:layout_toRightOf="@+id/iv_pic5"
+                        android:text="@string/tv_sksj"
+                        android:textSize="@dimen/detail_blue_bigger" />
+
+                    <EditText
+                        android:id="@+id/et_sksj_model"
+                        android:layout_width="200sp"
+                        android:layout_marginTop="8sp"
+                        android:layout_marginLeft="18sp"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@+id/tv_sksj_lable"
+                        android:background="@android:color/transparent"
+                        android:textSize="@dimen/choice_ware_bigger" />
+
+                    <ImageView
+                        android:id="@+id/iv_pic_go5"
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:background="@drawable/go" />
+                </RelativeLayout>
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_below="@+id/iv_pic_go5"
+                    android:background="@drawable/u62_line" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/login_under_color"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10sp">
+
+                    <ImageView
+                        android:id="@+id/iv_pic6"
+                        android:layout_width="18sp"
+                        android:layout_height="18sp"
+                        android:layout_centerVertical="true"
+                        android:background="@drawable/choice_no" />
+
+                    <TextView
+                        android:id="@+id/tv_zxsk_lable"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_margin="5sp"
+                        android:layout_toRightOf="@+id/iv_pic6"
+                        android:text="@string/tv_zxsk"
+                        android:textSize="@dimen/detail_blue_bigger" />
+
+                    <EditText
+                        android:id="@+id/et_zxsk_model"
+                        android:layout_width="200sp"
+                        android:layout_marginTop="8sp"
+                        android:layout_marginLeft="18sp"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@+id/tv_zxsk_lable"
+                        android:background="@android:color/transparent"
+                        android:textSize="@dimen/choice_ware_bigger" />
+
+                    <ImageView
+                        android:id="@+id/iv_pic_go6"
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:background="@drawable/go" />
+                </RelativeLayout>
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_below="@+id/iv_pic_go6"
+                    android:background="@drawable/u62_line" />
+            </LinearLayout>
+
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/login_under_color"
+                android:layout_marginTop="6sp"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10sp">
+
+                    <ImageView
+                        android:id="@+id/iv_pic7"
+                        android:layout_width="18sp"
+                        android:layout_height="18sp"
+                        android:layout_centerVertical="true"
+                        android:background="@drawable/choice_yes" />
+
+                    <TextView
+                        android:id="@+id/tv_jbfwzz_lable"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_margin="5sp"
+                        android:layout_toRightOf="@+id/iv_pic7"
+                        android:text="@string/tv_jbfwzz"
+                        android:textSize="@dimen/detail_blue_bigger" />
+
+                    <EditText
+                        android:id="@+id/et_jbfwzz_model"
+                        android:layout_width="200sp"
+                        android:layout_marginTop="8sp"
+                        android:layout_marginLeft="18sp"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@+id/tv_jbfwzz_lable"
+                        android:background="@android:color/transparent"
+                        android:textSize="@dimen/choice_ware_bigger" />
+
+                    <ImageView
+                        android:id="@+id/iv_pic_go7"
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:background="@drawable/go" />
+                </RelativeLayout>
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_below="@+id/iv_pic_go7"
+                    android:background="@drawable/u62_line" />
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/login_under_color"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10sp">
+
+                    <ImageView
+                        android:id="@+id/iv_pic8"
+                        android:layout_width="18sp"
+                        android:layout_height="18sp"
+                        android:layout_centerVertical="true"
+                        android:background="@drawable/choice_yes" />
+
+                    <TextView
+                        android:id="@+id/tv_xxptgz_lable"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_margin="5sp"
+                        android:layout_toRightOf="@+id/iv_pic8"
+                        android:text="@string/tv_xxptgz"
+                        android:textSize="@dimen/detail_blue_bigger" />
+
+                    <EditText
+                        android:id="@+id/et_xxptgz_model"
+                        android:layout_width="200sp"
+                        android:layout_marginTop="8sp"
+                        android:layout_marginLeft="18sp"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@+id/tv_xxptgz_lable"
+                        android:background="@android:color/transparent"
+                        android:textSize="@dimen/choice_ware_bigger" />
+
+                    <ImageView
+                        android:id="@+id/iv_pic_go8"
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:background="@drawable/go" />
+                </RelativeLayout>
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_below="@+id/iv_pic_go8"
+                    android:background="@drawable/u62_line" />
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/login_under_color"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10sp">
+
+                    <ImageView
+                        android:id="@+id/iv_pic9"
+                        android:layout_width="18sp"
+                        android:layout_height="18sp"
+                        android:layout_centerVertical="true"
+                        android:background="@drawable/choice_no" />
+
+                    <TextView
+                        android:id="@+id/tv_xgkpxsp_lable"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_margin="5sp"
+                        android:layout_toRightOf="@+id/iv_pic9"
+                        android:text="@string/tv_xgkpxsp"
+                        android:textSize="@dimen/detail_blue_bigger" />
+
+                    <EditText
+                        android:id="@+id/et_xgkpxsp_model"
+                        android:layout_width="200sp"
+                        android:layout_marginTop="8sp"
+                        android:layout_marginLeft="18sp"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@+id/tv_xgkpxsp_lable"
+                        android:background="@android:color/transparent"
+                        android:textSize="@dimen/choice_ware_bigger" />
+
+                    <ImageView
+                        android:id="@+id/iv_pic_go9"
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:background="@drawable/go" />
+                </RelativeLayout>
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_below="@+id/iv_pic_go9"
+                    android:background="@drawable/u62_line" />
+            </LinearLayout>
+
+
+
+        </LinearLayout>
+
+
+    </ScrollView>
 </RelativeLayout>
